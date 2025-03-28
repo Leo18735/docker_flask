@@ -4,7 +4,7 @@ node("master") {
     String githubToken = credentials('GITHUB_TOKEN')
     String repo = "Leo18735/docker_flask"
     String imageName = "my-docker-app"
-    String imageFile = "$imageName.tar"
+    String imageFile = "${imageName}.tar"
 
     stage('Get Latest Release') {
         sh """
