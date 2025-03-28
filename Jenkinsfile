@@ -18,6 +18,6 @@ node("master") {
     }
 
     stage('Run Docker Container') {
-        sh "docker run -d $imageName"
+        sh "docker run -p 9000:8080 $imageName"
     }
 }
